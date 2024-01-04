@@ -1,0 +1,21 @@
+.singular-date {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  .singular-date div {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .singular-date button {
+    cursor: pointer;
+  }
+  
