@@ -80,14 +80,24 @@ function convertToMySQLDatetime(dateString) {
     return mysqlDatetime;
 }
 
-
-
-const colorToMood = (color) =>{
-    if (color === "green") return 'happy';
-    if (color === "blue") return 'sad';
-    if (color === "red") return 'angry';
-    else return "none"
+const colorToMood = (c) => {
+  if (c === "green") return "happy"
+  if (c === "blue") return "sad"
+  if (c === "red") return "angry"
+  if (c === "gray") return "tired"
+  if (c === "orange") return "calm"
+  else return "none"
 }
+
+const moodToColor = (mood) =>{
+  if (mood === "happy") return "green"
+  if (mood === "sad") return "blue"
+  if (mood === "angry") return "red"
+  if (mood === "tired") return "gray"
+  if (mood === "calm") return "orange"
+  else return "none"
+}
+
 // Express route to save moods to MySQL
 app.post('/api/saveMoods', async (req, res) => {
     const moodsData = req.body; // Assuming the array of objects is in the request body
@@ -139,7 +149,7 @@ app.get('/api/changeAllMoods',(req,res)=>{
 
     const moodType = req.query.moodType;
     console.log('Received moodType:', moodType);
-    let query = `UPDATE moods SET singleMood = "${moodType}" WHERE date >= '2022-01-01';`;
+    let query = `UPDATE moods SET singleMood = "${moodType}", comments = "" WHERE date >= '2022-01-01';`;
 
     db.query(query, (err, results) => {
             if (err) {
