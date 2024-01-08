@@ -79,3 +79,8 @@ SELECT date, 'none', '' FROM temp_dates;
 -- Drop the temporary table
 DROP TEMPORARY TABLE IF EXISTS temp_dates;
 ```
+
+You can check if data is populated properly by 
+```
+SELECT * FROM moods;
+```
