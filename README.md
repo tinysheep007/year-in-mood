@@ -4,6 +4,10 @@
 3. [setup mysql](#mysql-table)
 4. [future improvements](#future-plan)
 
+## Web App without database connected
+https://tinysheep007.github.io/year-in-mood/
+Note: The initial page is blank, we have to click on the top title "Year IN Mood" to navigate to front page.
+
 ## Showcase
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af)
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/ad55dd9d-451a-42e9-80c4-2510ecb15439)
