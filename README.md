@@ -107,3 +107,5 @@ SELECT * FROM moods;
 ## Future plan
 1. add user authentication so that each user can have separate moods, but it might require us to edit our mysql database.
 2. make DATA ANALYSIS page able to analysis the recent saved local data as well.
+3. Styling the DATA ANALYSIS page.
+4. add more data analysis functions. Ex: comments sentiments analysis.
