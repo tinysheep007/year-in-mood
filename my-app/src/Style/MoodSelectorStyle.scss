@@ -1,0 +1,74 @@
+.mood-selector-button-container {
+    text-align: center;
+    //margin-top: 20px; /* Adjust as needed */
+    border: 3px black solid ;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 12px 7px 5px 2px rgba(128, 128, 128, 0.5);
+
+    .mood-description {
+      margin-bottom: 10px; /* Add margin to separate description and buttons */
+      color: black;
+      
+    }
+
+    .buttons-row {
+      display: flex; /* Keep buttons in the same row */
+      justify-content: space-around; /* Adjust the spacing between buttons */
+      flex-wrap: wrap;
+      
+      .mood-button {
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        margin: 5px;
+
+        &.happy {
+          background-color: #4caf50;
+        }
+
+        &.happy:hover {
+          background-color: #3c883e;
+        }
+
+        &.sad {
+          background-color: #2196f3;
+        }
+
+        &.sad:hover {
+          background-color: #1d82d4;
+        }
+
+        &.angry {
+          background-color: #f44336;
+        }
+
+        &.angry:hover {
+          background-color: #d2392e;
+        }
+
+        &.tired {
+          background-color: gray;
+        }
+
+        &.tired:hover {
+          background-color: rgb(79, 79, 79);
+        }
+
+        &.calm {
+          background-color: orange;
+        }
+
+        &.calm:hover {
+          background-color: rgb(163, 107, 4);
+        }
+
+
+      }
+    }
+}

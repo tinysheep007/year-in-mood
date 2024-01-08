@@ -1,0 +1,75 @@
+/* PowerfulButtonsStyle.scss */
+
+.powerful-buttons-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    border: 3px black solid ;
+    //margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 12px 7px 5px 2px rgba(128, 128, 128, 0.5);
+    
+    h2 {
+      font-size: 24px; /* Adjust the font size as needed */
+      margin-bottom: 10px; /* Add some spacing between h2 and buttons */
+      color: black;
+    }
+    
+    .buttons-row {
+        display: column; /* Keep buttons in the same row */
+        justify-content: space-around; /* Adjust the spacing between buttons */
+      }
+    
+    .powerb {
+      background-color: #61dafb;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin: 10px; /* Adjust the margin for better spacing */
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 20px;
+  
+      &:hover {
+        background-color: #2185d0;
+      }
+  
+      &.all-none {
+        background-color: #e0e0e0;
+        color: #333;
+      }
+  
+      &.all-none:hover {
+        background-color: #d0cece;
+        color: #333;
+      }
+  
+      &.all-happy {
+        background-color: #4caf50;
+      }
+  
+      &.all-happy:hover {
+        background-color: #3c883e;
+      }
+  
+      &.all-sad {
+        background-color: #2196f3;
+      }
+  
+      &.all-sad:hover {
+        background-color: #1d82d4;
+      }
+  
+      &.all-angry {
+        background-color: #f44336;
+      }
+  
+      &.all-angry:hover {
+        background-color: #d2392e;
+      }
+    }
+  }
+  

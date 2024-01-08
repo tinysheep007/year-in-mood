@@ -1,0 +1,77 @@
+/* HomeStyle.scss */
+*{
+  // border: 1px red solid;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: rgb(238, 239, 240);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.two-column-container {
+  display: flex;
+  gap: 5px; // Adjust the gap as needed
+}
+
+.left-column {
+  width: 20%; // Adjust the width as needed
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 20;
+}
+
+.right-column {
+  width: 80%; // Adjust the width as needed
+  margin-left: 10%; // Match the width of the left column
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 0;
+}
+
+.sqlUpdateButton {
+  margin-top: 0px; /* Adjust the top margin as needed */
+  text-align: center; /* Center the button within the div */
+  border: 3px black solid;
+  border-radius: 15px;
+  padding: 9px;
+  color: black;
+}
+
+.sqlUpdateButton button {
+  background-color: #618dfb;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.sqlUpdateButton button:hover {
+  background-color: #196aa7;
+}
+
+.mood-selector-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; // Adjust the gap as needed
+  justify-content: center;
+  margin-left: 20%; // Match the width of the left column
+}

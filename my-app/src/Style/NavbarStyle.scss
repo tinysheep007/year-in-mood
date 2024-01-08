@@ -1,0 +1,35 @@
+/* styles.css or App.css */
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 17px;
+  position: fixed;
+  width: 99%;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+.navbar-title a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  // margin-right: 10px;
+}

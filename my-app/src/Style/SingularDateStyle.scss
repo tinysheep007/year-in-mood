@@ -1,21 +1,66 @@
-.singular-date {
+/* SingularDateStyle.scss */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.single-big-container {
+  margin: 20px;
+
+  .singular-date {
+    width: 100px;
+    height: 125px;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    margin: 10px;
-  }
-  
-  .singular-date div {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 15px;
-    margin-bottom: 5px;
+    border: 5px solid black;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    padding: 5px;
+    color: white;
+    box-shadow: 12px 7px 5px 2px rgba(128, 128, 128, 0.5);
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    .exactDay {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .dayOfWeek {
+      font-family: cursive;
+    }
+
+    .moodOfDay {
+      font-family: cursive;
+    }
   }
-  
-  .singular-date button {
+
+  button {
+    background-color: #495153;
+    color: white;
+    border: none;
+    padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0c1a24;
+    }
   }
+
+
+  /* Add styling for the modal */
+  .ReactModal__Overlay {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
   
+  }
+
+}
