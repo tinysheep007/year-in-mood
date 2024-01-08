@@ -1,4 +1,16 @@
 # Year In Mood Project
+1. [running the project](#running-the-project)
+2. [popi](#populate-the-database)
+3. 
+## Running the project
+First, we need to configure a proper MYSQL database using the guide below.
+Then we need to run both the backend and the front end.
+Note: Without database or backend setup, you can still view the web app. However, not all functionality are working.
+we can access ```./backend``` and type in ```npm install```
+Then, we can run the backend side by ```npm start```
+
+On your terminal or powershell or bash, if you see the console.log is printing out "mysql connected"
+Then you set up the database sucesssfully.
 
 ## Set up MySQL database (With SQL commands in mySQL workbench)
 configuration of the mySQL connection is located at the ```./backend/index.js```
@@ -40,6 +52,7 @@ CREATE TABLE moods (
 );
 ```
 
+<a id="populate-the-database"></a>
 ### Populate the database
 run the following commands in mySQL workbench and it will fill your database with default data.
 ```
