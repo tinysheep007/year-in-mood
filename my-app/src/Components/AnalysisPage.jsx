@@ -4,6 +4,7 @@ import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 import axios from 'axios';
 import MoodAnalysis from "./MoodAnalysis";
+import localData from "../moodData.js";
 
 const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
 
@@ -18,11 +19,14 @@ const AnalysisPage = () => {
             const data = await response.data;
             if (data.length === 0){
                 console.log("error")
+                // get default local data 
+                setMoodData(localData)
             }else{
                 setMoodData(data);
             }
             
           } catch (error) {
+            setMoodData(localData)
           }
         };
     

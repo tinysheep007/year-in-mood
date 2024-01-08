@@ -11,6 +11,8 @@ import MoodAnalysis from './Components/MoodAnalysis.jsx';
 import PowerfulButtons from './Components/PowerfulButtons.jsx';
 import RouterTest from './Components/AnalysisPage.jsx';
 import { Link } from 'react-router-dom';
+import moodToColor from './utils/moodToColor.js';
+import colorToMood from './utils/colorToMood.js';
 
 Modal.setAppElement('#root');
 
@@ -93,7 +95,7 @@ function Home() {
   };
   
   const handleSaveToSQL = async () => {
-    try {
+    if (fetchError === true){
       // Convert dateColors into an array of objects
       const dataToSave = Object.entries(dateColors).flatMap(([date, colors]) => {
         if (Array.isArray(colors)) {
@@ -101,22 +103,55 @@ function Home() {
           return colors.map(({ color, comments }) => ({ date, color, comments }));
         } else {
           // If colors is not an array, create an array with a single object
-          return [{ date, color: colors.color, comments: colors.comments }];
+          return [{ date, mood: colorToMood(colors.color), comments: colors.comments }];
         }
       });
-  
-      // Make a POST request to your Express endpoint
-      await axios.post('http://localhost:8000/api/saveMoods', dataToSave);
-  
-      // Optionally, update your state or perform other actions after successful save
-      console.log('Data saved to SQL successfully');
 
-      // Auto-refresh the page after the Axios call is done
-      window.location.reload();
+      const updatedMoodData = moodSQLData.map(originalItem => {
+        const matchingNewData = dataToSave.find(newItem => newItem.date === originalItem.date);
       
-    } catch (error) {
-      console.error('Error saving data to SQL:', error);
+        if (matchingNewData) {
+          return {
+            date: originalItem.date,
+            mood: matchingNewData.mood,
+            comments: matchingNewData.comments,
+          };
+        } else {
+          return originalItem;
+        }
+      });
+
+      setMoodSQLData(updatedMoodData)
+
     }
+    else {
+        try {
+          // Convert dateColors into an array of objects
+          const dataToSave = Object.entries(dateColors).flatMap(([date, colors]) => {
+            if (Array.isArray(colors)) {
+              // If colors is an array, map over it
+              return colors.map(({ color, comments }) => ({ date, color, comments }));
+            } else {
+              // If colors is not an array, create an array with a single object
+              return [{ date, color: colors.color, comments: colors.comments }];
+            }
+          });
+      
+          // Make a POST request to your Express endpoint
+          await axios.post('http://localhost:8000/api/saveMoods', dataToSave);
+      
+          // Optionally, update your state or perform other actions after successful save
+          console.log('Data saved to SQL successfully');
+    
+          // Auto-refresh the page after the Axios call is done
+          window.location.reload();
+          
+        } catch (error) {
+          console.error('Error saving data to SQL:', error);
+        }
+    }
+
+    
   };
 
   return (

@@ -24,6 +24,12 @@ const Instructions = () => {
                         <div className="section-header"> Before We Start </div>
                         <p>
                         We strongly encourage you to set up the MySQL database and secure the connection. You can only experience the full functionality by correctly deploying the data portion. For instructions on how to set up the database, visit https://github.com/tinysheep007/year-in-mood.
+                        In the home page, if you are not properly connected to a database, there would be
+                        a message on the top of the dates. If the database it's connected proerply, then message should be saying using SQL data.
+                         Also without MySQL connected, not all the functionality
+                        are properly functioning. For exmaple, ALL MOOD CHANGE BUTTONS would not function. You can still
+                        color in the dates with moods and save it by clicking the UPDATE IN SQL button to save the data 
+                        locally, but the DATA ANALYSIS section would only be using the default data.
                         </p>
                     </div>
 
