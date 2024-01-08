@@ -1,7 +1,11 @@
 # Year In Mood Project
-1. [running the project](#running-the-project)
-2. [popi](#populate-the-database)
-3. 
+1. [About](#about)
+2. [running the project](#running-the-project)
+3. [setup mysql](#mysql-table)
+
+## About
+Year In Mood is a full-stack web application designed for mood tracking and self-discovery. Users can record emotions on specific dates, visualize mood patterns, and document memorable experiences in a journal. The app supports functionalities such as resetting feelings, editing journals, and securely saving data through the MySQL database. The Data Analysis tab provides insightful visualizations of feelings throughout the year, breaking down counts by type, weeks, and months. This project leverages React.js for the front end, Node.js and Express for the backend, and MySQL for database management, offering a comprehensive and interactive experience for users seeking to understand their emotional well-being.
+
 ## Running the project
 First, we need to configure a proper MYSQL database using the guide below.
 Then we need to run both the backend and the front end.
@@ -52,7 +56,7 @@ CREATE TABLE moods (
 );
 ```
 
-<a id="populate-the-database"></a>
+
 ### Populate the database
 run the following commands in mySQL workbench and it will fill your database with default data.
 ```
