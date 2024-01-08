@@ -30,7 +30,7 @@ for (let month = 1; month <= 12; month++) {
         mood = 'happy'; // Default to "happy" if needed
     }
 
-    const comments = "";
+    const comments = "I love making new comments. It must be fun right?";
 
     moodData.push({ date: dateString, mood, comments });
   }
