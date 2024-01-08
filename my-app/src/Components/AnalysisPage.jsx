@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-import WordCloud from 'react-d3-cloud';
-import { scaleOrdinal } from 'd3-scale';
-import { schemeCategory10 } from 'd3-scale-chromatic';
 import axios from 'axios';
 import MoodAnalysis from "./MoodAnalysis";
 import localData from "../moodData.js";
 import "../Style/AnalysisPageStyle.scss";
 import loadingGif from "../utils/loadingGif.gif";
-
-const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
 
 const AnalysisPage = () => {
 
@@ -40,7 +35,7 @@ const AnalysisPage = () => {
 
 
     return (
-        <div className="out" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div className="out slide-in-left" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             {loading ? (
               <div className="loading-container">
                 

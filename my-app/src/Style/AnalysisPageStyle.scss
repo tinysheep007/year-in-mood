@@ -9,3 +9,19 @@
     }
   }
   
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

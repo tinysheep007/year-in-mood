@@ -28,6 +28,14 @@
       font-size: 25px;
     }
 
+    @media (max-width: 768px) {
+      p {
+          font-size: 20px;
+          padding: 2px;
+      }
+    }
+  
+
     .exactDay {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }

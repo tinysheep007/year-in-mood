@@ -11,6 +11,7 @@
   
 }
 
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -26,6 +27,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .navbar-title a {
+    font-size: 15px;
+  }
+}
+
 .navbar-links a {
   font-size: 1.5rem;
   color: white;
@@ -33,3 +40,10 @@
   margin-left: 30px;
   // margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+  .navbar-links a {
+    font-size: 15px;
+  }
+}
+

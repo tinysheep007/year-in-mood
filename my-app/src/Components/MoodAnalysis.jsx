@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "../Style/MoodAnalysisStyle.scss"
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid  } from 'recharts';
-import { BarChart, Bar, Cell, Label, LineChart, Line } from 'recharts';
+import { PieChart, Pie, Legend, Tooltip } from 'recharts';
+import { XAxis, YAxis, CartesianGrid  } from 'recharts';
+import { BarChart, Bar, Cell, LineChart, Line } from 'recharts';
 import CreateWordCloud from './CreateWordCloud';
 
 const MoodAnalysis = ({  originalData }) => {
@@ -98,9 +98,9 @@ const MoodAnalysis = ({  originalData }) => {
   let tiredVal = countMoodInt('tired')
   let calmVal = countMoodInt('calm')
 
-  let happyPerc = calculateMoodPercentage("happy")
-  let sadPerc = calculateMoodPercentage("sad")
-  let angryPerc = calculateMoodPercentage("angry")
+  // let happyPerc = calculateMoodPercentage("happy")
+  // let sadPerc = calculateMoodPercentage("sad")
+  // let angryPerc = calculateMoodPercentage("angry")
 
   const data = [
     {
@@ -138,7 +138,7 @@ const MoodAnalysis = ({  originalData }) => {
   const COLORS = ['green', 'blue', 'red', 'gray', 'orange']
 
   return (
-    <div className='mood-analysis'>
+    <div className='mood-analysis slide-in-right'>
       
         <h2>Mood Analysis</h2>
 

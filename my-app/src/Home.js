@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
-import logo from './logo.svg';
 import axios from 'axios';
 import Modal from 'react-modal';
 import MoodSelector from './Components/MoodSelector.jsx';
 import SingularDate from './Components/SingularDate.jsx';
 import './Style/HomeStyle.scss'; 
 import moodData from './moodData.js';
-import MoodAnalysis from './Components/MoodAnalysis.jsx';
 import PowerfulButtons from './Components/PowerfulButtons.jsx';
-import RouterTest from './Components/AnalysisPage.jsx';
-import { Link } from 'react-router-dom';
-import moodToColor from './utils/moodToColor.js';
 import colorToMood from './utils/colorToMood.js';
 import loadingGif from "./utils/loadingGif.gif";
 
@@ -25,6 +19,25 @@ function Home() {
   const [moodSQLData, setMoodSQLData] = useState([]);
   const [fetchError, setFetchError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [marginLeft, setMarginLeft] = useState(window.innerWidth > 768 ? '450px' : '20px');
+  const [marginTop, setMarginTop] = useState(window.innerWidth > 768 ? '150px' : '20px');
+  const [mlForSQL, setMlForSQL] = useState(window.innerWidth > 768 ? '450px' : '100px');
+  const [mtForSQL, setMtForSQL] = useState(window.innerWidth > 768 ? '100px' : '10px');
+  useEffect(() => {
+    const handleResize = () => {
+      setMarginLeft(window.innerWidth > 768 ? '450px' : '20px');
+      setMarginTop(window.innerWidth > 768 ? '150px' : '20px');
+      setMlForSQL(window.innerWidth > 768 ? '450px' : '100px');
+      setMtForSQL(window.innerWidth > 768 ? '100px' : '10px');
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   // useEffect to fetch data from the Express API
   useEffect(() => {
@@ -160,7 +173,7 @@ function Home() {
     <div className="App">
       <header className="App-header">
         <div className='two-column-container'>
-          <div className="left-column" style={{  display: loading ? 'none' : 'flex',  alignItems: 'center', marginTop: '40px',  }}>
+          <div className="left-column slide-in-left"  style={{  display: loading ? 'none' : 'flex',  alignItems: 'center', marginTop: '40px',  }}>
             <PowerfulButtons />
             <MoodSelector onMoodChange={handleMoodChange}/>
             <div className="sqlUpdateButton" style={{boxShadow: "12px 7px 5px 2px rgba(128, 128, 128, 0.5)"}}>
@@ -169,7 +182,7 @@ function Home() {
             </div>
           </div>
           
-          <div className='right-column'>
+          <div className='right-column slide-in-right'>
             {loading ? (
             <div className="loading-container">
               <img src={loadingGif} alt="Loading" style={{ marginTop:"100px",width: '250px', height: '250px' }} />
@@ -177,9 +190,12 @@ function Home() {
             </div>
           ) : ""}
 
-            {fetchError ? <p style={{display: loading ? 'none' : 'flex', marginTop:"70px", color: "black", marginLeft:"30px"}}>Using default data NOTE: CHANGES WON'T BE SAVED. To experience the full application, you must
-              connect to a database so that backend could update dynamically.
-            </p>: <p style={{display: loading ? 'none' : 'flex', marginTop:"100px", color: "black"}}>Using SQL data</p>}
+            {fetchError ? 
+              <p className="note" style={{ display: loading ? 'none' : 'flex', color: 'black', marginLeft, marginTop }}>
+                Using default data NOTE: All Mood Change Buttons do not work.
+              </p>
+          
+            : <p style={{display: loading ? 'none' : 'flex', marginTop: mtForSQL, color: "black", marginLeft: mlForSQL}}>Using SQL data</p>}
 
             <div>
             {Object.entries(organizedMoodData).map(([month, data]) => (

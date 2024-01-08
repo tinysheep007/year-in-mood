@@ -4,14 +4,11 @@ import "../Style/InstructionsStyle.scss";
 
 const Instructions = () => {
     return (
-        <div className="front-page-container">
-            <div className="front-content">
+        <div className="front-page-container fade-in">
+            <div className="front-content" style={{marginTop: "150px"}}>
                 <h2 className="front-h2" >
                     Instructions on navigating the web app!
                 </h2>
-
-
-
                 <div className="front-div">
                     <div className="section">
                         <div className="section-header">Introduction</div>
@@ -63,7 +60,7 @@ const Instructions = () => {
                 </div>
                 
             </div>
-            <div className="image-container">
+            <div className="image-container-ins">
                 <img src="https://hips.hearstapps.com/hmg-prod/images/happy-smiley-face-balloons-against-colorful-cotton-royalty-free-image-1677446093.jpg?crop=0.668xw:1.00xh;0,0&resize=1200:*" alt="Description of the image" />
             </div>
         </div>

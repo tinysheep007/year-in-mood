@@ -4,7 +4,7 @@ import "../Style/FrontPageStyle.scss";
 
 const FrontPage = () => {
     return (
-        <div className="front-page-container">
+        <div className="front-page-container fade-in">
             <div className="front-content">
                 <h2 className="front-h2" >
                     Come and log how you are doing this year with moods, journals, and more!

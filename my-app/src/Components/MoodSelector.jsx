@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import "../Style/MoodSelectorStyle.scss";
-import moodToColor from '../utils/moodToColor';
 import colorToMood from '../utils/colorToMood';
 
 const MoodSelector =  ({ onMoodChange }) => {
