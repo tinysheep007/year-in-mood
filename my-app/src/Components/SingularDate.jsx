@@ -87,7 +87,7 @@ const SingularDate = ({ date, color, updateDateColor, SQLComments, defaultMood }
                 <button onClick={reset}>reset</button>
 
                 <div>
-                    <button onClick={handleCommentButtonClick}>Comment</button>
+                    <button onClick={handleCommentButtonClick}>Journal</button>
                     {/* Add the following modal code */}
                     <Modal
                         isOpen={isModalOpen}
@@ -115,7 +115,7 @@ const SingularDate = ({ date, color, updateDateColor, SQLComments, defaultMood }
                     >
                         <div className='ReactModal__Content'>
 
-                            <h2 style={{fontSize: "30px"}}>Comment</h2>
+                            <h2 style={{fontSize: "30px"}}>Journal</h2>
                             <textarea
                             style={{
                                 width: '100%',  // Adjust the width as needed
@@ -142,7 +142,7 @@ const SingularDate = ({ date, color, updateDateColor, SQLComments, defaultMood }
                                     marginRight: '10px', // Adjust the margin as needed
                                 }}
                                 >
-                                Save Comment
+                                Save Journal
                                 </button>
 
                                 <button
