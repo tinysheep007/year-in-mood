@@ -2,21 +2,31 @@
 1. [About](#about)
 2. [running the project](#running-the-project)
 3. [setup mysql](#mysql-table)
+4. [future improvements](#future-plan)
 
 ## About
 Year In Mood is a full-stack web application designed for mood tracking and self-discovery. Users can record emotions on specific dates, visualize mood patterns, and document memorable experiences in a journal. The app supports functionalities such as resetting feelings, editing journals, and securely saving data through the MySQL database. The Data Analysis tab provides insightful visualizations of feelings throughout the year, breaking down counts by type, weeks, and months. This project leverages React.js for the front end, Node.js and Express for the backend, and MySQL for database management, offering a comprehensive and interactive experience for users seeking to understand their emotional well-being.
 
-More detailed instruction is in the INTRSUCTIONS tab inside the web app. Note: Click the UPDATE IN SQL button to re-render the page so that all data is saved locally or to acutal database.
+More detailed instruction is in the INTRSUCTIONS tab inside the web app. Note: Click the UPDATE IN SQL button to re-render the page so that all data is saved locally or to acutal database. 
+Some page takes about 3 seconds to render, please be patient. 
 
 ## Running the project
 First, we need to configure a proper MYSQL database using the guide below.
 Then we need to run both the backend and the front end.
 Note: Without database or backend setup, you can still view the web app. However, not all functionality are working.
-we can access ```./backend``` and type in ```npm install```
+
+## Start: Running the backend 
+we can access ```./backend``` and type in ```npm install``` in the terminal or powershell or bash or ...
 Then, we can run the backend side by ```npm start```
 
 On your terminal or powershell or bash, if you see the console.log is printing out "mysql connected"
 Then you set up the database sucesssfully.
+
+## Start: Running the frontend
+we can access ```./my-app``` and type in ```npm install``` in the terminal or powershell or bash or ...
+Then, we can run the frontend side by ```npm start```
+
+Once you set up the MYSQL, refresh the web app, you can start enjoying the app.
 
 ## Set up MySQL database (With SQL commands in mySQL workbench)
 configuration of the mySQL connection is located at the ```./backend/index.js```
@@ -86,3 +96,7 @@ You can check if data is populated properly by
 ```
 SELECT * FROM moods;
 ```
+
+## Future plan
+1. add user authentication so that each user can have separate moods, but it might require us to edit our mysql database.
+2. make DATA ANALYSIS page able to analysis the recent saved local data as well.
