@@ -8,6 +8,9 @@
 https://tinysheep007.github.io/year-in-mood/
 
 Note: The initial page is blank, we have to click on the top title "Year IN Mood" to navigate to front page.
+The app is build on a big monitor which means there is no responsive styling yet! The style would be
+twisted if the viewing device screen is too small. Also, at home tab and data analysis  tab, please wait 
+about 3 seconds until it renders properly.
 
 ## Showcase
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af)
