@@ -14,7 +14,7 @@ const FrontPage = () => {
                 This app enables users to track and analyze daily moods, offering insightful visualizations to identify emotional patterns and enhance self-awareness. Click "Get Started" to begin the journey of self-discovery.
                 </div>
                 <div style={{marginTop: "40px"}}>
-                    <Link to="/instruction" ><button className="get-started-button">Get Started!</button></Link>
+                    <Link to="/instructions" ><button className="get-started-button">Get Started!</button></Link>
                     <Link to="/home" ><button className="home-button">Began filling out moods!</button></Link>
                 </div>
                 

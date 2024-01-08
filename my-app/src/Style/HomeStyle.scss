@@ -21,6 +21,7 @@
 .two-column-container {
   display: flex;
   gap: 5px; // Adjust the gap as needed
+  flex-wrap: wrap; 
 }
 
 .left-column {
@@ -32,6 +33,15 @@
   align-items: center;
   justify-content: space-around;
   z-index: 20;
+  min-width: 200px; /* Set a minimum width for the left column */
+  flex: 0 0 auto;
+  min-width: 300px; /* Set a minimum width for the right column */
+  flex: 1 0 auto; 
+  padding-right: 20px;
+  //overflow-y: auto;
+  // max-height: 100vh;
+  overflow-y: auto; /* Add vertical scrolling */
+  max-height: 100vh; /* Set a maximum height for the left column */
 }
 
 .right-column {
@@ -41,7 +51,23 @@
   justify-content: space-around;
   text-align: center;
   z-index: 0;
+ 
 }
+
+@media (max-width: 768px) {
+  .left-column {
+    font-size: 10px;
+    width: 100%; /* Set to full width for smaller screens */
+    position: relative; /* Change position to relative */
+    margin-bottom: 20px; /* Add some space between the columns */
+  }
+
+  .sqlUpdateButton {
+    margin-top: 20px; /* Adjust the top margin for better spacing */
+    font-size: 16px; /* Adjust font size for better readability on smaller screens */
+  }
+}
+
 
 .sqlUpdateButton {
   margin-top: 0px; /* Adjust the top margin as needed */

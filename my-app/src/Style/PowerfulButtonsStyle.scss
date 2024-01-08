@@ -15,12 +15,19 @@
       margin-bottom: 10px; /* Add some spacing between h2 and buttons */
       color: black;
     }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 5px; /* Adjust margin for better spacing on smaller screens */
+      }
+    }
     
     .buttons-row {
         display: column; /* Keep buttons in the same row */
         justify-content: space-around; /* Adjust the spacing between buttons */
       }
     
+
     .powerb {
       background-color: #61dafb;
       color: white;
