@@ -13,18 +13,19 @@ import RouterTest from './Components/AnalysisPage.jsx';
 import { Link } from 'react-router-dom';
 import moodToColor from './utils/moodToColor.js';
 import colorToMood from './utils/colorToMood.js';
+import loadingGif from "./utils/loadingGif.gif";
 
 Modal.setAppElement('#root');
 
 function Home() {
   const [currMood, setCurrMood] = useState('green');
   const [dateColors, setDateColors] = useState({});
-
   // from mysql data
   // mood, date, comments
   const [moodSQLData, setMoodSQLData] = useState([]);
-
   const [fetchError, setFetchError] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   // useEffect to fetch data from the Express API
   useEffect(() => {
     const fetchData = async () => {
@@ -38,13 +39,14 @@ function Home() {
         }else{
           setMoodSQLData(data);// Updated state variable name
         }
-        
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
         setFetchError(true);
         // Handle error if not fetched properly, use the default data
         // but it could take sometime to load in
         setMoodSQLData(moodData);
+        setLoading(false);
       }
     };
 
@@ -158,7 +160,7 @@ function Home() {
     <div className="App">
       <header className="App-header">
         <div className='two-column-container'>
-          <div className="left-column" style={{ display: 'flex',  alignItems: 'center', marginTop: '40px',  }}>
+          <div className="left-column" style={{  display: loading ? 'none' : 'flex',  alignItems: 'center', marginTop: '40px',  }}>
             <PowerfulButtons />
             <MoodSelector onMoodChange={handleMoodChange}/>
             <div className="sqlUpdateButton" style={{boxShadow: "12px 7px 5px 2px rgba(128, 128, 128, 0.5)"}}>
@@ -168,11 +170,16 @@ function Home() {
           </div>
           
           <div className='right-column'>
-            
+            {loading ? (
+            <div className="loading-container">
+              <img src={loadingGif} alt="Loading" style={{ marginTop:"100px",width: '250px', height: '250px' }} />
+              <p>Loading...</p>
+            </div>
+          ) : ""}
 
-            {fetchError ? <p style={{marginTop:"70px", color: "black", marginLeft:"30px"}}>Using default data NOTE: CHANGES WON'T BE SAVED. To experience the full application, you must
+            {fetchError ? <p style={{display: loading ? 'none' : 'flex', marginTop:"70px", color: "black", marginLeft:"30px"}}>Using default data NOTE: CHANGES WON'T BE SAVED. To experience the full application, you must
               connect to a database so that backend could update dynamically.
-            </p>: <p style={{marginTop:"100px", color: "black"}}>Using SQL data</p>}
+            </p>: <p style={{display: loading ? 'none' : 'flex', marginTop:"100px", color: "black"}}>Using SQL data</p>}
 
             <div>
             {Object.entries(organizedMoodData).map(([month, data]) => (

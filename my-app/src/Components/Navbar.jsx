@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className="navbar-container">
         <div className="navbar-title">
-          <Link to="/">Year In Mood</Link>
+          <Link to="/year-in-mood">Year In Mood</Link>
         </div>
         <div className="navbar-links">
           <Link to="/Home">Home</Link>

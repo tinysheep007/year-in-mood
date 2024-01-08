@@ -5,12 +5,15 @@ import { schemeCategory10 } from 'd3-scale-chromatic';
 import axios from 'axios';
 import MoodAnalysis from "./MoodAnalysis";
 import localData from "../moodData.js";
+import "../Style/AnalysisPageStyle.scss";
+import loadingGif from "../utils/loadingGif.gif";
 
 const schemeCategory10ScaleOrdinal = scaleOrdinal(schemeCategory10);
 
 const AnalysisPage = () => {
 
     const [moodData, setMoodData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,9 +27,11 @@ const AnalysisPage = () => {
             }else{
                 setMoodData(data);
             }
+            setLoading(false)
             
           } catch (error) {
             setMoodData(localData)
+            setLoading(false)
           }
         };
     
@@ -35,8 +40,17 @@ const AnalysisPage = () => {
 
 
     return (
-        <div>
-            <MoodAnalysis originalData={moodData} />
+        <div className="out" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            {loading ? (
+              <div className="loading-container">
+                
+                <img src={loadingGif} alt="Loading" style={{ marginTop:"300px",width: '250px', height: '250px' }} />
+
+                <p style={{color:"black", fontSize: "45px", marginBottom:"500px"}}>Loading...</p>
+              </div>
+            ) : <MoodAnalysis originalData={moodData} />}
+            
+            
         </div>
     )
 }

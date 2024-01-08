@@ -52,6 +52,20 @@
   text-align: center;
   z-index: 0;
  
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .loading-container p {
+    color: black;
+    //margin-top: 20px; /* Adjust the top margin as needed */
+    font-size: 45px; /* Adjust font size for better readability */
+  }
+
 }
 
 @media (max-width: 768px) {
