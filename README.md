@@ -6,6 +6,8 @@
 ## About
 Year In Mood is a full-stack web application designed for mood tracking and self-discovery. Users can record emotions on specific dates, visualize mood patterns, and document memorable experiences in a journal. The app supports functionalities such as resetting feelings, editing journals, and securely saving data through the MySQL database. The Data Analysis tab provides insightful visualizations of feelings throughout the year, breaking down counts by type, weeks, and months. This project leverages React.js for the front end, Node.js and Express for the backend, and MySQL for database management, offering a comprehensive and interactive experience for users seeking to understand their emotional well-being.
 
+More detailed instruction is in the INTRSUCTIONS tab inside the web app. Note: Click the UPDATE IN SQL button to re-render the page so that all data is saved locally or to acutal database.
+
 ## Running the project
 First, we need to configure a proper MYSQL database using the guide below.
 Then we need to run both the backend and the front end.
