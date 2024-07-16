@@ -1,5 +1,5 @@
 # Year In Mood Project ℹ️
-1. [About](#about)
+1. [About](#about-)
 2. [running the project](#running-the-project)
 3. [setup mysql](#mysql-table)
 4. [future improvements](#future-plan)
