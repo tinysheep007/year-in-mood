@@ -1,8 +1,8 @@
 # Year In Mood Project ℹ️
 1. [About](#about-)
-2. [running the project](#running-the-project)
-3. [setup mysql](#mysql-table)
-4. [future improvements](#future-plan)
+2. [Running the project](#running-the-project-)
+3. [Setup MySql](#mysql-table-)
+4. [Future improvements](#future-plan-)
 
 ## Accessible Web App without database connected 📊
 https://tinysheep007.github.io/year-in-mood/
@@ -112,7 +112,7 @@ You can check if data is populated properly by
 SELECT * FROM moods;
 ```
 
-## Future plan
+## Future plan ☢️
 1. add user authentication so that each user can have separate moods, but it might require us to edit our mysql database.
 2. make DATA ANALYSIS page able to analysis the recent saved local data as well.
 3. Styling the DATA ANALYSIS page.
