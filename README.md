@@ -13,11 +13,14 @@ twisted if the viewing device screen is too small. Also, at home tab and data an
 about 3 seconds until it renders properly.
 
 ## Showcase 📺
-<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af" alt="Image 1" width="600">
-<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/ad55dd9d-451a-42e9-80c4-2510ecb15439" alt="Image 2" width="600">
-<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/24b74fc0-dfb9-459b-a1a3-d0b50ef864b3" alt="Image 3" width="600">
-<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e86aad25-a9b7-45c2-aed0-22aa0950ceb5" alt="Image 4" width="600">
-<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e4c55047-5510-4048-abfb-1185e3c60e3c" alt="Image 5" width="600">
+<div style="text-align: center;">
+    <img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af" alt="Image 1" width="600">
+    <img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/ad55dd9d-451a-42e9-80c4-2510ecb15439" alt="Image 2" width="600">
+    <img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/24b74fc0-dfb9-459b-a1a3-d0b50ef864b3" alt="Image 3" width="600">
+    <img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e86aad25-a9b7-45c2-aed0-22aa0950ceb5" alt="Image 4" width="600">
+    <img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e4c55047-5510-4048-abfb-1185e3c60e3c" alt="Image 5" width="600">
+</div>
+
 
 
 ## About 📒
