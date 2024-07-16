@@ -2,7 +2,7 @@
 1. [About](#about-)
 2. [Running the project](#running-the-project-)
 3. [Setup MySql](#mysql-table-)
-4. [Future improvements](#future-plan-)
+4. [Future improvements](#future-plan-%EF%B8%8F)
 
 ## Accessible Web App without database connected 📊
 https://tinysheep007.github.io/year-in-mood/
@@ -13,11 +13,12 @@ twisted if the viewing device screen is too small. Also, at home tab and data an
 about 3 seconds until it renders properly.
 
 ## Showcase 📺
-![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af)
-![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/ad55dd9d-451a-42e9-80c4-2510ecb15439)
-![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/24b74fc0-dfb9-459b-a1a3-d0b50ef864b3)
-![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e86aad25-a9b7-45c2-aed0-22aa0950ceb5)
-![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e4c55047-5510-4048-abfb-1185e3c60e3c)
+<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af" alt="Image 1" width="600">
+<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/ad55dd9d-451a-42e9-80c4-2510ecb15439" alt="Image 2" width="600">
+<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/24b74fc0-dfb9-459b-a1a3-d0b50ef864b3" alt="Image 3" width="600">
+<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e86aad25-a9b7-45c2-aed0-22aa0950ceb5" alt="Image 4" width="600">
+<img src="https://github.com/tinysheep007/year-in-mood/assets/58338071/e4c55047-5510-4048-abfb-1185e3c60e3c" alt="Image 5" width="600">
+
 
 ## About 📒
 Year In Mood is a full-stack web application designed for mood tracking and self-discovery. Users can record emotions on specific dates, visualize mood patterns, and document memorable experiences in a journal. The app supports functionalities such as resetting feelings, editing journals, and securely saving data through the MySQL database. The Data Analysis tab provides insightful visualizations of feelings throughout the year, breaking down counts by type, weeks, and months. This project leverages React.js for the front end, Node.js and Express for the backend, and MySQL for database management, offering a comprehensive and interactive experience for users seeking to understand their emotional well-being.
