@@ -1,10 +1,10 @@
-# Year In Mood Project
+# Year In Mood Project ℹ️
 1. [About](#about)
 2. [running the project](#running-the-project)
 3. [setup mysql](#mysql-table)
 4. [future improvements](#future-plan)
 
-## Accessible Web App without database connected
+## Accessible Web App without database connected 📊
 https://tinysheep007.github.io/year-in-mood/
 
 Note: The initial page is blank, we have to click on the top title "Year In Mood" to navigate to front page.
@@ -12,20 +12,20 @@ The app is build on a big monitor which means there is no responsive styling yet
 twisted if the viewing device screen is too small. Also, at home tab and data analysis  tab, please wait 
 about 3 seconds until it renders properly.
 
-## Showcase
+## Showcase 📺
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e3c4dfbe-75bf-4ebc-9e7e-32f3dac925af)
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/ad55dd9d-451a-42e9-80c4-2510ecb15439)
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/24b74fc0-dfb9-459b-a1a3-d0b50ef864b3)
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e86aad25-a9b7-45c2-aed0-22aa0950ceb5)
 ![image](https://github.com/tinysheep007/year-in-mood/assets/58338071/e4c55047-5510-4048-abfb-1185e3c60e3c)
 
-## About
+## About 📒
 Year In Mood is a full-stack web application designed for mood tracking and self-discovery. Users can record emotions on specific dates, visualize mood patterns, and document memorable experiences in a journal. The app supports functionalities such as resetting feelings, editing journals, and securely saving data through the MySQL database. The Data Analysis tab provides insightful visualizations of feelings throughout the year, breaking down counts by type, weeks, and months. This project leverages React.js for the front end, Node.js and Express for the backend, and MySQL for database management, offering a comprehensive and interactive experience for users seeking to understand their emotional well-being.
 
 More detailed instruction is in the INTRSUCTIONS tab inside the web app. Note: Click the UPDATE IN SQL button to re-render the page so that all data is saved locally or to acutal database. 
 Some page takes about 3 seconds to render, please be patient. 
 
-## Running the project
+## Running the project 🏃
 First, we need to configure a proper MYSQL database using the guide below.
 Then we need to run both the backend and the front end.
 Note: Without database or backend setup, you can still view the web app. However, not all functionality are working.
@@ -59,7 +59,7 @@ If you do not create a database yet, use the following command in workbench
 CREATE DATABASE mood;
 ```
 
-### MySQL table
+### MySQL table 💻
 There is only 1 table used which makes it simple to set up.
 I used the name "moods" for the table.
 There are 3 columns: 
